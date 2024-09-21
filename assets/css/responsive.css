@@ -1,0 +1,173 @@
+@media (width > 540px) {
+    .steps__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (width > 768px) {
+
+    header::before {
+        height: calc(100% - 4rem);
+    }
+
+    nav {
+        position: static;
+        padding-block: 2rem;  /* top, bottom */
+        padding-inline: 1rem;  /* left, right */
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo a {
+        font-weight: 800;
+        color: var(--text-dark);
+
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        padding: 0;
+        width: fit-content;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav__links a {
+        padding-block: 5px;
+        color: var(--text-dark);
+        border-bottom: 2px solid transparent;
+
+    }
+
+    .nav__links a:hover {
+        border-color: var(--primary-color);
+    }
+
+    .nav__links__btn {
+        display: none;
+    }
+
+    .nav__btns {
+        display: flex;
+        flex: 1;
+        align-items: centers;
+        justify-content: flex-end;
+    }
+
+    .nav__btns .btn__primary {
+        color: var(--text-dark);
+        background-color: transparent;
+    }
+
+    .header__content {
+        grid-template-columns: repeat(5, 1fr);  /* tạo ra 5 cột, mỗi cột chiếm một phần bằng nhau */
+        align-items: center;
+    }
+
+    .header__container::before {
+        right: 5rem;
+        width: calc(50% - 4rem);
+        height: 100%;
+    }
+
+    .header__image {
+        grid-column: 3/6; /* img sẽ bắt đầu từ cột thứ 3 và kéo dài đến cột thứ 6 */
+        
+    }
+
+    .header__content {
+        /* grid-area: row-start / column-start / row-end / column-end; */
+        grid-area: 1/1/2/3;
+        /* Phần tử header__content sẽ bắt đầu từ hàng 1 và cột 1, trải dài đến trước hàng 2 và cột 3.
+        Điều này có nghĩa là nó sẽ chiếm toàn bộ hàng đầu tiên và kéo dài qua hai cột đầu tiên 
+        (cột 1 và 2). */
+    }
+
+    .steps__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .experience__container img {
+        opacity: 1;
+    }
+
+    .experience__card:nth-child(1) {
+        left: 5rem;
+    }
+
+    .experience__card:nth-child(3) {
+        left: 5rem;
+    }
+
+    .experience__card:nth-child(4) {
+        right: 5rem;
+    }
+
+    .experience__card:nth-child(6) {
+        right: 5rem;
+    }
+
+    .download__grid {
+        margin-block: 4rem;
+        padding-inline: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .download__image {
+        display: flex;
+        position: relative;
+        isolation: isolate;
+    }
+
+    .download__image img {
+        position: absolute;
+        max-width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  /* Di chuyển phần tử sang trái 50% và lên trên 50% so với kích thước của chính nó */
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));  
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__bar {
+        flex-direction: row;
+    }
+
+    .footer__bar:is(h4, .footer__socials) {
+        flex: 1;
+    }
+
+    .footer__socials {
+        justify-content: flex-end;
+    }
+}
+
